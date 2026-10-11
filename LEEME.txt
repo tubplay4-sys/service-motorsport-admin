@@ -1,0 +1,16 @@
+FIXMOTORS VÁSQUEZ — VERSIÓN INICIAL 0.1
+
+Incluye:
+- Registro de clientes y teléfonos.
+- Registro de motocicletas relacionadas con clientes.
+- Órdenes de trabajo, estado, mano de obra, refacciones, anticipo, total y saldo.
+- Inventario con existencias, costo, precio de venta y alerta de stock bajo.
+- Exportación e importación de respaldo JSON.
+- Interfaz adaptada a iPhone y archivos para PWA.
+
+IMPORTANTE:
+1. Los datos se guardan en el almacenamiento local del navegador. No se sincronizan entre dispositivos.
+2. Exporta respaldos con frecuencia. No borres los datos de Safari sin respaldar primero.
+3. Para que la instalación como PWA y el funcionamiento offline estén disponibles en iPhone, los archivos deben publicarse primero en una dirección HTTPS. Después abre esa dirección en Safari, toca Compartir y elige “Agregar a pantalla de inicio”.
+4. Este ZIP no instala automáticamente la app en el iPhone. Es la primera versión del proyecto.
+5. En esta versión, los importes de refacciones de una orden se capturan manualmente; todavía no descuentan automáticamente piezas del inventario.
