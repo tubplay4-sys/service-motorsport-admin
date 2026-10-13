@@ -1,14 +1,22 @@
 {
-  "name": "Service Motorsport Admin",
-  "short_name": "Service Motorsport",
-  "description": "Control offline de taller, órdenes, inventario y reparación de llantas",
+  "name": "SMA — Service Motorsport Admin v0.4",
+  "short_name": "SMA v0.4",
+  "description": "Gestión de taller, órdenes, inventario y caja",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0e141a",
   "theme_color": "#101820",
   "icons": [
-    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
