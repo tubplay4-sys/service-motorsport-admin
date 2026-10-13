@@ -1,3 +1,4 @@
+// SMA v0.4 — paquete de reintento; conserva fixmotors-v1 para mantener los datos locales.
 const KEY='fixmotors-v1';
 const blank=()=>({clients:[],bikes:[],orders:[],parts:[],tires:[],quickJobs:[],cash:[],next:{client:1,bike:1,order:1,part:1,tire:1,quick:1,cash:1}});
 let db=loadDB(),tab='inicio',search='';

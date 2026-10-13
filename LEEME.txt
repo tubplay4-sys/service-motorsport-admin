@@ -1,16 +1,21 @@
-FIXMOTORS VÁSQUEZ — VERSIÓN INICIAL 0.1
+SMA v0.4 — Service Motorsport Admin
 
-Incluye:
-- Registro de clientes y teléfonos.
-- Registro de motocicletas relacionadas con clientes.
-- Órdenes de trabajo, estado, mano de obra, refacciones, anticipo, total y saldo.
-- Inventario con existencias, costo, precio de venta y alerta de stock bajo.
-- Exportación e importación de respaldo JSON.
-- Interfaz adaptada a iPhone y archivos para PWA.
+ANTES DE ACTUALIZAR
+1. Abre la versión actual en Safari y entra en Respaldo.
+2. Exporta un respaldo JSON y guárdalo en Archivos/iCloud Drive.
+3. En GitHub, reemplaza los archivos de la raíz del repositorio por los de este ZIP.
+4. Espera a que GitHub Pages publique la versión y vuelve a abrir la app.
+5. Prueba primero con datos ficticios.
 
-IMPORTANTE:
-1. Los datos se guardan en el almacenamiento local del navegador. No se sincronizan entre dispositivos.
-2. Exporta respaldos con frecuencia. No borres los datos de Safari sin respaldar primero.
-3. Para que la instalación como PWA y el funcionamiento offline estén disponibles en iPhone, los archivos deben publicarse primero en una dirección HTTPS. Después abre esa dirección en Safari, toca Compartir y elige “Agregar a pantalla de inicio”.
-4. Este ZIP no instala automáticamente la app en el iPhone. Es la primera versión del proyecto.
-5. En esta versión, los importes de refacciones de una orden se capturan manualmente; todavía no descuentan automáticamente piezas del inventario.
+CAMBIOS
+- Identidad visual SMA v0.4 y nuevos iconos.
+- Al marcar una orden como entregada, permite registrar el pago en Caja o dejarla como falta de pago.
+- En las órdenes se puede agregar una refacción existente desde inventario, con cantidad; también se pueden escribir piezas externas manualmente.
+- Las refacciones del inventario se descuentan al guardar la orden. Si se quitan de la orden o se elimina esta, las existencias se devuelven.
+- Las piezas externas no descuentan inventario.
+- Se conserva la clave local fixmotors-v1 para mantener compatibilidad con datos guardados previamente.
+
+IMPORTANTE
+- El descuento de inventario se aplica al guardar la orden, no instantáneamente al seleccionar el artículo.
+- El flujo de cobro pendiente todavía requiere validar los datos en pruebas antes de usarlo con operaciones reales.
+- Exporta respaldos periódicos. Los datos locales no se sincronizan automáticamente entre dispositivos.
