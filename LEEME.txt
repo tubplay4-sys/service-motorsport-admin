@@ -1,20 +1,25 @@
-SMA v0.4.1 — Service Motorsport Admin
+SMA v0.5 — Service Motorsport Admin
 
-Correcciones de funcionamiento:
-- Al retirar existencias del inventario, ahora pregunta si es una venta directa o una salida para uso interno/merma.
-- Las ventas directas se registran en Caja por el precio de venta configurado en el inventario y muestran una utilidad estimada.
-- Al marcar una orden como entregada, pregunta si el cliente pagó el saldo o si queda pendiente.
-- Si se confirma el pago, registra el cobro del saldo en Caja y actualiza el importe pagado de la orden.
-- Se actualizó la clave de caché del service worker para forzar la carga de los archivos nuevos.
+Novedades principales:
+- Nueva página de inicio con panel de control y accesos a Órdenes, Trabajo, Clientes, Motos, Inventario y Caja.
+- Estilo visual oscuro deportivo con azul marino y azul eléctrico.
+- Burbujas de notificación dinámicas para órdenes abiertas, trabajos pendientes de cobro y existencias bajas.
+- Las órdenes entregadas y marcadas como pagadas se ocultan de la lista principal y de la lista de Órdenes; los movimientos de cobro se conservan en Caja.
+- Se unificó el acceso de Trabajo rápido y Llantas bajo una sección llamada “Trabajo”.
+- En “Trabajo” puedes registrar servicios normales, parches y llantas; elegir refacciones del inventario o capturar hasta dos refacciones externas.
+- Al guardar un trabajo pregunta si ya está pagado. Si se confirma, registra el ingreso en Caja; si se deja pendiente, no lo cuenta como dinero cobrado. Los trabajos pendientes permiten registrar el pago después.
+- Al eliminar un trabajo nuevo, se devuelve al inventario la cantidad de refacciones utilizadas y se elimina su movimiento de Caja vinculado.
+- Se conserva la información previa de la versión anterior, incluidos clientes, motos, órdenes, inventario, trabajos de llantas, trabajos rápidos y Caja.
 
-IMPORTANTE:
-1. Exporta un respaldo desde Ajustes antes de actualizar.
-2. Sube TODOS los archivos de este ZIP a la raíz del repositorio, reemplazando los anteriores.
-3. Confirma el commit y espera a que GitHub Pages publique los cambios.
-4. Cierra SMA y vuelve a abrir el sitio. Si sigue mostrando la versión anterior, cierra la pestaña y abre de nuevo la URL.
-5. Prueba primero con datos ficticios.
+IMPORTANTE ANTES DE ACTUALIZAR:
+1. Abre la versión actual de SMA y entra a Respaldo.
+2. Exporta un respaldo JSON y comprueba que el archivo quedó guardado en Archivos/iCloud Drive.
+3. Sube TODOS los archivos de este ZIP a la raíz del repositorio de GitHub, reemplazando los anteriores.
+4. Espera a que GitHub Pages publique los cambios. Cierra y vuelve a abrir SMA.
+5. Prueba primero con datos ficticios: un trabajo pagado, uno pendiente, una refacción de inventario y una refacción externa.
 
-Notas:
-- La salida de inventario se registra como venta directa usando el precio de venta y costo unitario definidos en el inventario.
-- La opción de pendiente no registra el saldo como dinero cobrado.
-- Esta versión es una corrección de trabajo; prueba las funciones antes de usarla con movimientos reales.
+NOTAS IMPORTANTES:
+- Esta versión guarda los datos localmente en el navegador y no sincroniza entre dispositivos.
+- Los trabajos nuevos tienen flujo de cobro integrado. Los registros históricos de llantas y trabajos rápidos se conservan y se muestran dentro de Trabajo, pero siguen usando su estructura anterior.
+- No borres los datos de Safari ni reinstales antes de exportar un respaldo.
+- Se comprobó la sintaxis de JavaScript; no se ha realizado una prueba completa en un navegador real. Valida con datos ficticios antes de usar movimientos reales.

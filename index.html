@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101820">
+<meta name="theme-color" content="#080d16">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Service Motorsport">
@@ -11,19 +11,20 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>Service Motorsport Admin</title>
 <style>
-:root{--bg:#0e141a;--panel:#17212b;--panel2:#202d39;--text:#f3f6f8;--muted:#a7b4bf;--accent:#f2a900;--line:#31404d;--green:#55d6a2;--red:#ff7272}
+:root{--bg:#080d16;--panel:#101d30;--panel2:#142944;--text:#f3f7ff;--muted:#8fa5c1;--accent:#168bff;--line:#243a56;--green:#42d6a0;--red:#ff626f;--amber:#ffb020}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding-bottom:calc(82px + env(safe-area-inset-bottom))}
-header{padding:calc(18px + env(safe-area-inset-top)) 18px 16px;background:linear-gradient(135deg,#111a22,#253543);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;border-radius:12px;background:var(--accent);color:#111;font-weight:900;display:grid;place-items:center;font-size:18px}
+header{padding:calc(18px + env(safe-area-inset-top)) 18px 16px;background:linear-gradient(135deg,#080d16,#112440);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;border-radius:12px;background:#112440;border:1px solid #1e4978;color:var(--accent);font-weight:900;display:grid;place-items:center;font-size:18px;box-shadow:0 0 20px #168bff18}
 h1{font-size:20px;margin:0 0 3px}header p{margin:0;color:var(--muted);font-size:12px}.wrap{padding:16px;max-width:780px;margin:auto}
-nav{position:fixed;z-index:5;bottom:0;left:0;right:0;display:flex;gap:4px;padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:#111a22;border-top:1px solid var(--line);overflow-x:auto}
+nav{position:fixed;z-index:5;bottom:0;left:0;right:0;display:flex;gap:4px;padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:#080d16;border-top:1px solid var(--line);overflow-x:auto}
 nav button{flex:1;min-width:64px;background:transparent;border:0;color:var(--muted);font-size:11px;padding:8px 3px;border-radius:10px}
 nav button.active{background:var(--panel2);color:var(--accent)}nav span{display:block;font-size:19px;margin-bottom:3px}
 h2{font-size:19px;margin:4px 0 14px}.sub{color:var(--muted);font-size:13px;margin-top:-8px;margin-bottom:16px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat,.card,.formbox{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
 .stat small{display:block;color:var(--muted);font-size:12px}.stat strong{display:block;font-size:23px;margin-top:6px}
-button,.btn{border:0;border-radius:10px;padding:11px 13px;font-size:14px;font-weight:650;background:var(--accent);color:#171717;cursor:pointer}
+button,.btn{border:0;border-radius:10px;padding:11px 13px;font-size:14px;font-weight:650;background:var(--accent);color:#06111f;cursor:pointer}
 button.secondary,.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+.welcome{background:linear-gradient(135deg,#101d30,#0b1422);border:1px solid #1e4978;border-radius:18px;padding:18px;margin-bottom:14px;box-shadow:0 8px 26px #0003}.welcome .eyebrow{font-size:10px;letter-spacing:2px;color:var(--accent);font-weight:800}.welcome h2{font-size:23px;margin:8px 0}.welcome p{margin:0;color:var(--muted);font-size:13px}.home-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0 16px}.home-tile{position:relative;text-align:left;min-height:118px;background:linear-gradient(145deg,#112440,#0f1b2d);border:1px solid #1e4978;color:var(--text);border-radius:15px;padding:14px;display:flex;flex-direction:column;align-items:flex-start;gap:7px;box-shadow:0 5px 14px #0002}.home-tile:active{transform:scale(.985)}.tile-icon{font-size:25px;color:var(--accent);line-height:1.1}.tile-title{font-size:14px;font-weight:750}.tile-sub{font-size:11px;color:var(--muted);font-weight:400}.notify{position:absolute;top:9px;right:9px;min-width:22px;height:22px;padding:0 6px;border-radius:99px;display:grid;place-items:center;font-size:11px;font-weight:850;background:var(--red);color:white;border:2px solid #112440}.notify.amber{background:var(--amber);color:#111827}.notify.green{background:var(--green);color:#06251b}.home-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0 22px}.home-summary>div{background:#0d1727;border:1px solid var(--line);border-radius:12px;padding:11px}.home-summary small{display:block;color:var(--muted);font-size:10px}.home-summary strong{display:block;font-size:15px;margin-top:5px;overflow-wrap:anywhere}
 button.danger{background:#49272c;color:#ffdfe0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
 input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;background:#101820;color:var(--text);font:inherit;margin:5px 0 12px}
 label{font-size:12px;color:var(--muted);display:block}textarea{min-height:72px;resize:vertical}
@@ -35,16 +36,16 @@ label{font-size:12px;color:var(--muted);display:block}textarea{min-height:72px;r
 </style>
 </head>
 <body>
-<header><div class="brand"><div class="logo">SMA</div><div><h1>Service Motorsport Admin</h1><p>SMA v0.4 · Control de taller · MXN · Datos guardados en este dispositivo</p></div></div></header>
+<header><div class="brand"><div class="logo">SMA</div><div><h1>Service Motorsport Admin</h1><p>SMA v0.5 · Control de taller · MXN · Datos guardados en este dispositivo</p></div></div></header>
 <main class="wrap" id="app"></main>
 <nav id="nav">
 <button data-tab="inicio" class="active"><span>⌂</span>Inicio</button>
-<button data-tab="ordenes"><span>🛠</span>Órdenes</button>
-<button data-tab="clientes"><span>👤</span>Clientes</button>
+<button data-tab="ordenes"><span>▤</span>Órdenes</button>
+<button data-tab="trabajo"><span>🔧</span>Trabajo</button>
+<button data-tab="clientes"><span>♙</span>Clientes</button>
 <button data-tab="motos"><span>🏍</span>Motos</button>
 <button data-tab="inventario"><span>▦</span>Inventario</button>
-<button data-tab="llantas"><span>🛞</span>Llantas</button>
-<button data-tab="caja"><span>💵</span>Caja</button>
+<button data-tab="caja"><span>▣</span>Caja</button>
 <button data-tab="ajustes"><span>⚙</span>Respaldo</button>
 </nav>
 <script src="app.js"></script>

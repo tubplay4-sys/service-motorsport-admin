@@ -1,12 +1,12 @@
 {
-  "name": "SMA — Service Motorsport Admin v0.4",
-  "short_name": "SMA v0.4",
+  "name": "SMA — Service Motorsport Admin v0.5",
+  "short_name": "SMA v0.5",
   "description": "Gestión de taller, órdenes, inventario y caja",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0e141a",
-  "theme_color": "#101820",
+  "background_color": "#080d16",
+  "theme_color": "#080d16",
   "icons": [
     {
       "src": "icon-192.png",
